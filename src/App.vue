@@ -19,6 +19,9 @@ export default {
 </script>
 
 <style>
+body {
+	margin: 0;
+}
 .d-flex {
 	display: flex;
 	justify-content: space-between;

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div style="height:100vh">
 		<div class="profil">
 			<h3>Pearson Specter Litt</h3>
 			<div class="d-flex">
@@ -13,16 +13,44 @@
 			<ul>
 				<li>
 					<a href="#">
-						<div class="d-flex flex-start">
+						<div class="d-flex flex-start color">
 							<img src="@/assets/house.svg" alt="" />
 							Get started
 						</div>
 					</a>
 				</li>
-				<li><a href="#">Transactions</a></li>
-				<li><a href="#">Statistics</a></li>
-				<li><a href="#">Settings</a></li>
-				<li><a href="#">Help Center</a></li>
+				<li>
+					<a href="#">
+						<div class="d-flex flex-start color">
+							<img src="@/assets/transactions.svg" alt="" />
+							Transactions
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="d-flex flex-start color">
+							<img src="@/assets/statistics.svg" alt="" />
+							Statistics
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="d-flex flex-start color">
+							<img src="@/assets/settings.svg" alt="" />
+							Navigation
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="d-flex flex-start color">
+							<img src="@/assets/help.svg" alt="" />
+							Help center
+						</div>
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</div>
@@ -51,12 +79,28 @@ h4 {
 }
 ul li {
 	list-style: none;
+	margin-bottom: 30px;
+}
+ul li:nth-child(1) {
+	padding-top: 15px;
+}
+ul {
+	margin: 0;
+	padding-left: 22px;
 }
 ul li a {
 	text-decoration: none;
 	color: #b3b3b3;
+	font-weight: 500;
+}
+.color {
+	color: #b3b3b3;
+}
+ul li img {
+	margin-right: 14px;
 }
 nav {
 	background-color: #222222;
+	height: 88vh;
 }
 </style>
