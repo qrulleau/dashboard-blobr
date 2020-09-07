@@ -1,28 +1,47 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app" class="d-flex">
+		<Navigation></Navigation>
+		<LandingPage></LandingPage>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navigation from './components/Navigation.vue';
+import LandingPage from './components/LandingPage.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	name: 'App',
+	components: {
+		Navigation,
+		LandingPage,
+	},
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.d-flex {
+	display: flex;
+	justify-content: space-between;
+}
+.flex-start {
+	justify-content: start;
+}
+.flex-end {
+	justify-content: end;
+}
+.t-center {
+	text-align: center;
+}
+.t-left {
+	text-align: left;
+}
+.t-right {
+	text-align: right;
+}
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: 'Inter', sans-serif;
+	color: #000000;
 }
 </style>
