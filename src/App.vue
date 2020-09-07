@@ -32,6 +32,9 @@ body {
 .flex-end {
 	justify-content: end;
 }
+.align-center {
+	align-items: center;
+}
 .t-center {
 	text-align: center;
 }
@@ -46,5 +49,8 @@ body {
 	scroll-behavior: smooth;
 	font-family: 'Inter', sans-serif;
 	color: #000000;
+}
+button {
+	cursor: pointer;
 }
 </style>
