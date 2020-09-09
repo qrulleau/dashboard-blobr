@@ -198,6 +198,9 @@ h6 {
 .statistics {
 	padding: 0 40px;
 }
+.statistics h3 {
+	margin: 40px 0 16px 0;
+}
 .date p {
 	color: #4d4d4d;
 	font-size: 14px;
