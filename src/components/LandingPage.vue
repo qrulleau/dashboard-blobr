@@ -9,6 +9,9 @@
 			<button>Years</button>
 			<button>Custom...</button>
 		</div>
+		<div class="background-canvas">
+			<canvas id="planet-chart"></canvas>
+		</div>
 		<div class="statistics">
 			<h3>Statistics</h3>
 			<div class="d-flex">
@@ -117,9 +120,36 @@
 
 <script>
 import Card from '@/components/Card.vue';
+import planetChartData from '@/chart-data.js';
+import Chart from 'chart.js';
+
+Chart.Legend.prototype.afterFit = function() {
+	this.height = this.height + 40;
+};
+
 export default {
+	data() {
+		return {
+			planetChartData,
+		};
+	},
 	components: {
 		Card,
+	},
+	methods: {
+		createChart(chartId, chartData) {
+			const ctx = document.getElementById(chartId);
+			ctx.height = 105;
+			ctx.width = 401;
+			new Chart(ctx, {
+				type: chartData.type,
+				data: chartData.data,
+				options: chartData.options,
+			});
+		},
+	},
+	mounted() {
+		this.createChart('planet-chart', this.planetChartData);
 	},
 };
 </script>
@@ -147,7 +177,6 @@ h6 {
 }
 .transaction h6 {
 	font-weight: normal;
-	font-size: 12px;
 }
 .selection-time button {
 	font-size: 14px;
@@ -182,7 +211,8 @@ h6 {
 .transaction {
 	width: 10.1%;
 }
-.transaction p {
+.transaction p,
+.transaction h6 {
 	font-size: 12px;
 	color: #b3b3b3;
 }
@@ -221,5 +251,10 @@ h6 {
 .heading {
 	margin-bottom: 16px;
 	margin-left: 16px;
+}
+.background-canvas {
+	background-color: #ffffff;
+	padding: 40px;
+	border: 1px solid #ebebeb;
 }
 </style>

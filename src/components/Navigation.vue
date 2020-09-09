@@ -101,6 +101,6 @@ ul li img {
 }
 nav {
 	background-color: #222222;
-	height: 88vh;
+	height: 110vh;
 }
 </style>
