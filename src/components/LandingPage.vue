@@ -9,6 +9,20 @@
 			<button>Years</button>
 			<button>Custom...</button>
 		</div>
+		<div class="month-sidebar">
+			<button class="navigation-right">
+				<img src="@/assets/arrow-left.svg" />
+			</button>
+			<div class="container-month-side-bar">
+				<button v-for="date in date" :key="date.month">
+					<h3>{{ date.month }}</h3>
+					{{ date.years }}
+				</button>
+			</div>
+			<button class="navigation-left">
+				<img src="@/assets/arrow-right.svg" />
+			</button>
+		</div>
 		<div class="background-canvas">
 			<canvas id="planet-chart"></canvas>
 		</div>
@@ -131,6 +145,92 @@ export default {
 	data() {
 		return {
 			planetChartData,
+			date: [
+				{
+					month: 'January',
+					years: '2019',
+				},
+				{
+					month: 'February',
+					years: '2019',
+				},
+				{
+					month: 'March',
+					years: '2019',
+				},
+				{
+					month: 'April',
+					years: '2019',
+				},
+				{
+					month: 'May',
+					years: '2019',
+				},
+				{
+					month: 'June',
+					years: '2019',
+				},
+				{
+					month: 'July',
+					years: '2019',
+				},
+				{
+					month: 'August',
+					years: '2019',
+				},
+				{
+					month: 'September',
+					years: '2019',
+				},
+				{
+					month: 'October',
+					years: '2019',
+				},
+				{
+					month: 'November',
+					years: '2019',
+				},
+				{
+					month: 'December',
+					years: '2019',
+				},
+				{
+					month: 'January',
+					years: '2020',
+				},
+				{
+					month: 'February',
+					years: '2020',
+				},
+				{
+					month: 'March',
+					years: '2020',
+				},
+				{
+					month: 'April',
+					years: '2020',
+				},
+				{
+					month: 'May',
+					years: '2020',
+				},
+				{
+					month: 'June',
+					years: '2020',
+				},
+				{
+					month: 'July',
+					years: '2020',
+				},
+				{
+					month: 'August',
+					years: '2020',
+				},
+				{
+					month: 'September',
+					years: '2020',
+				},
+			],
 		};
 	},
 	components: {
@@ -236,6 +336,7 @@ h6 {
 	background-color: #ffffff;
 	padding-top: 16px;
 	border-radius: 8px;
+	margin-bottom: 40px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 }
 .active {
@@ -259,5 +360,45 @@ h6 {
 	background-color: #ffffff;
 	padding: 40px;
 	border: 1px solid #ebebeb;
+}
+.month-sidebar {
+	display: flex;
+	margin: 0 40px 24px 40px;
+}
+.month-sidebar button {
+	background-color: #ffffff;
+	padding: 10px 24px;
+	border: 1px solid #ebebeb;
+	border-right: none;
+}
+.month-sidebar button h3 {
+	font-size: 14px;
+	margin: 0;
+}
+.month-sidebar button br {
+	height: 0px;
+}
+.container-month-side-bar {
+	overflow: hidden;
+	width: 85vw;
+	display: flex;
+}
+.container-month-side-bar button:nth-child(1) {
+	border-left: none;
+}
+.navigation-right {
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	padding: 10px 12px !important;
+}
+.navigation-left {
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	border-left: none !important;
+	border-right: 1px solid #ebebeb !important;
+	padding: 10px 12px !important;
+}
+.navigation-left:hover img {
+	color: red;
 }
 </style>

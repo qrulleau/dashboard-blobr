@@ -138,7 +138,7 @@ ul li img {
 }
 nav {
 	background-color: #222222;
-	height: 110vh;
+	height: 123.5vh;
 }
 .relative-position {
 	position: relative;
@@ -167,6 +167,9 @@ nav {
 .relative-position:hover .dropdown img {
 	transform: rotate(180deg);
 	transition: 300ms;
+}
+.relative-position:hover {
+	cursor: pointer;
 }
 .profil:hover {
 	background-color: #333333;
